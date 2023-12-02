@@ -57,7 +57,7 @@ fn main() {
     
 }
 
-const CONVERSIONS : [&str; 11]= ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+const CONVERSIONS : [&str; 9]= ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
 
 fn check_for_num(string : &str, index : usize) -> Option<u8> {
 
@@ -71,7 +71,7 @@ fn check_for_num(string : &str, index : usize) -> Option<u8> {
         
         for (i, str) in CONVERSIONS.into_iter().enumerate(){
             let length = str.len();
-            if string.get(index..(index + length)) == Some(str) { return Some(i as u8); }
+            if string.get(index..(index + length)) == Some(str) { return Some((i + 1) as u8); }
         }
 
     }
