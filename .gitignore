@@ -12,3 +12,6 @@ Cargo.lock
 
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
+
+# Advent of Code inputs should not be shared, inputs are stored in a .txt file in my code
+*.txt
