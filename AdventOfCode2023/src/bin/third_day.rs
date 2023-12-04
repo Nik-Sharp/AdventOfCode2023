@@ -89,7 +89,7 @@ fn main() {
 
         }
     }
-
+    
     let mut gear_sum = 0;
 
     for x in gears {

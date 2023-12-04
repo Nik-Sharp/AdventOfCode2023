@@ -1,6 +1,8 @@
 {
     "rust-analyzer.linkedProjects": [
         "./AdventOfCode2023/Cargo.toml",
+        "./AdventOfCode2023/Cargo.toml",
+        "./AdventOfCode2023/Cargo.toml",
         "./AdventOfCode2023/Cargo.toml"
     ]
 }

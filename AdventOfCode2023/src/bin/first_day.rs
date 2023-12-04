@@ -1,7 +1,6 @@
 use core::panic;
-use std::io;
+use std::{io, collections::HashSet};
 
-// Note this specifically solves part two, I refactored my code after I solved part 1 to solve part 2
 fn main() {
     let mut inputs = vec![];
 
