@@ -39,12 +39,13 @@ fn main() {
     let mut card_count = 0 as usize;
     let mut index = 0;
 
+    
     while index < inputs.len() {
         
         let mut next_cards = inputs.get_mut(index..).unwrap().iter_mut().enumerate();
 
         let card = next_cards.next().unwrap().1;
-        
+
         let count = card.card_numbers.iter().filter(|x| card.winning_numbers.contains(x.trim())).count() as usize;
 
         let amount_left = if inputs_len - 1 - index  > 0 { inputs_len - 1 - index } else {0};
