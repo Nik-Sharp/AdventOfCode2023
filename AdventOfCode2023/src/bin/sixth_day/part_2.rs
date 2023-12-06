@@ -1,7 +1,7 @@
 use core::panic;
 use std::fs;
 
-const ELIPSION : f64 = 0.000001;
+const EPSILON : f64 = 0.000001;
 
 fn quadratic_equation(a: f64, b: f64, c: f64) -> (f64, f64) {
     let sqrt = ((b * b) - (4.0 * a * c)).sqrt();
@@ -19,7 +19,7 @@ impl Race {
 
         let mut result = x_intercepts.1.ceil() as u32 - x_intercepts.0.ceil() as u32;
 
-        if ((x_intercepts.1  - x_intercepts.0) - (result as f64)).abs() < ELIPSION {
+        if ((x_intercepts.1  - x_intercepts.0) - (result as f64)).abs() < EPSILON {
             result -= 1;
         }
 
@@ -30,7 +30,7 @@ fn main() {
     // Gets input from file
     let full_input;
 
-    let mut inputs = match fs::read_to_string("input.txt") {
+    let mut inputs = match fs::read_to_string("../input.txt") {
         Ok(x) => {
             full_input = x;
             full_input.split("\n").map(|x| {
