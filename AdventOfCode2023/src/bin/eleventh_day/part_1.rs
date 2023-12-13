@@ -7,7 +7,7 @@ fn main() {
     // Gets input from file
     let full_input;
 
-    let mut inputs = match fs::read_to_string("input.txt") {
+    let mut inputs = match fs::read_to_string("../input.txt") {
         Ok(x) => {
             full_input = x;
             full_input
