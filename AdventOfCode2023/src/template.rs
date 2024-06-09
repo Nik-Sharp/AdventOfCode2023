@@ -14,15 +14,4 @@ fn main() {
         }
         Err(x) => panic!("Error in reading, {}", x),
     };
-
-    let rocks = inputs.iter().enumerate().map(|(y, line)| {
-        line.chars()
-            .enumerate()
-            .map(move |(x, char)| if char == 'O' { Some((x, y)) } else { None })
-            .flatten()
-    }).group_by(|(x, y)| y);
-
-    for (_index, input) in inputs.iter().enumerate() {
-        println!("{}", input);
-    }
 }
